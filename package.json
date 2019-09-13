@@ -1,0 +1,39 @@
+{
+  "name": "frontend-boilerplate",
+  "version": "1.0.0",
+  "description": "Simple front-end development using Gulp 4",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "gulp",
+    "boilerplate",
+    "html",
+    "css",
+    "javascript",
+    "pug"
+  ],
+  "author": "@naresh7ddnsm",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "autoprefixer": "*",
+    "browser-sync": "*",
+    "cssnano": "*",
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-imagemin": "*",
+    "gulp-postcss": "*",
+    "gulp-pug": "*",
+    "gulp-replace": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*"
+  },
+  "dependencies": {}
+}
