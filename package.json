@@ -1,7 +1,7 @@
 {
-  "name": "frontend-boilerplate",
+  "name": "Medindia website",
   "version": "1.0.0",
-  "description": "Simple front-end development using Gulp 4",
+  "description": "Developing the website using Gulp 4",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
