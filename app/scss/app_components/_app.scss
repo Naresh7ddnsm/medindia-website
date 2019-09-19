@@ -1,3 +1,13 @@
+// Importing custom fomnt for the website
+
+@include font-face('pnt', '../fonts/ProximaNovaT-Thin', normal, normal);
+@include font-face('pnr', '../fonts/ProximaNova-Regular', normal, normal);
+@include font-face('pnb', '../fonts/ProximaNova-Bold', normal, normal);
+
+body {
+	font-family: 'pnr', sans-serif;
+	font-size: rem(16px);
+}
 h1{
 	color: red;
 }

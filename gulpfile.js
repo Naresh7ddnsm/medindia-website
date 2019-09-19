@@ -21,7 +21,7 @@ const fsPath = {
 		html: './app/*.html',
 		pug: './app/**/*.pug',
 		js: './app/js/**/*.js',
-		css: './app/scss/*.scss',
+		css: './app/scss/**/*.scss',
 		fonts: './app/fonts/*.*',
 		img: './app/images/**/*',
 		data: 'app/js/data/*.*',
