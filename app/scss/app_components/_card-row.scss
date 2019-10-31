@@ -1,0 +1,39 @@
+.card-row {
+	position: relative;
+	.thumbnail{
+		float:left;
+		margin-right: rem(20px);
+	}
+	.thumbnail-s{
+		width: rem(60px)
+	}
+	.thumbnail-m{
+		width: rem(100px)
+	}
+	.thumbnail-l{
+		width: rem(140px)
+	}
+	.card-title{
+		font-weight: $wb;
+		margin-bottom: rem(5px);
+	}
+	a{
+		text-decoration: none;
+		color: $link-color-black;
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+		z-index: 1000;
+	}
+	p{
+		@include font-size(14px);
+		color: #666;
+	}
+	.catName{
+		position: absolute;
+		font-size: 12px;
+		text-transform: uppercase;
+		bottom: 8px;
+		color: #555;
+	}
+}

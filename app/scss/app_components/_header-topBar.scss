@@ -1,0 +1,44 @@
+header{
+    position: relative;
+}
+.topBar{
+    @include _media(min, 1200px){
+        background: #ebf0f0;
+    }
+    &Nav{
+        list-style: none;
+        > li {
+            line-height: 28px;
+            float: left;
+            color: #3F79FF;
+            & + li {
+                margin-left: 25px;
+                font-size: 14px;
+            }
+            & > a{
+                color: #3F79FF;
+            }
+        }
+        > li, > li a{
+            font-size: 14px;
+        }
+        .caret{
+            margin-left: 6px;
+        }
+        
+    }
+}
+.topBarNav--right, .navBar--right{
+    list-style: none;
+    line-height: 90%;
+    @include _media(min, lg){
+        line-height: unset;
+    }
+    > li{
+        float: right;
+        & + li {
+            margin-left: 0;
+            margin-right: 25px;
+        }
+    }
+}

@@ -2,7 +2,30 @@
 	min-height: rem(34px);
 	background: #fff;
 	width: 100%;
-	border: none;
+	border: 1px solid #ccc;
 	outline: none;
 	@include padding(null, rem(10px), null, rem(10px))
+}
+.field__inline{
+	fieldset{
+		display: inline-block;
+		margin-right: 25px;
+	}
+}
+fieldset{
+	border: none;
+	outline: none;
+	margin-bottom: 15px;
+	.radiogroup{
+		label{
+			display: inline-block;
+			input{
+				margin-right: 8px;
+				display: inline-block;
+			}
+			& + label{
+				margin-left: 15px;
+			}
+		}
+	}
 }

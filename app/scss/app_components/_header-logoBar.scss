@@ -1,0 +1,96 @@
+.logoBar{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: fixed;
+    width: 100%;
+    left: 0; top: 0;
+    z-index: 1024;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    @include _media(min, lg){
+        position: static;
+        width: auto;
+    }
+    .icon{
+        display: inline-block;
+        //width: 30px; height: 30px;
+        // background: #000;
+        vertical-align: middle;
+        @include _media(min, lg){
+            margin-right: 8px;
+        }
+        
+    }
+    .navBar--right{
+        > li + li {
+            margin-right: 15px;
+            @include _media(min, lg){
+                margin-right: 0;
+            }
+        }
+        @include _media(min, lg){
+            margin-top: 5px;
+        }
+        span{
+            display: none;
+            @include _media(min, lg){
+                display: inline-block;;
+                position: relative;
+                // bottom: 10px;
+            }
+        }
+        .icon-user{
+            font-size: 23px;
+            margin-top: 3px;
+            @include _media(min, lg){
+                font-size: 18px;
+                margin-top: 0;
+            }
+        }
+    }
+}
+.brand{
+    .hamburgerMenu{
+        // width: 30px;
+        //height: 30px;
+        // background: #000;
+        float: left;
+        font-size: 28px;
+        cursor: pointer;
+    }
+    &__logo{
+        font-size: 26px;
+        font-family: $font-pb;
+        line-height: 30px;
+        float: right;
+        color: #000;
+        position: relative;
+        right: calc(50% / 2);
+        transform: translateX(calc(50% + 8px));
+        text-transform: uppercase;
+        @include _media(min, lg){
+            position: static;
+            float: left;
+            transform: none;
+            width: 53px; height: 43px;
+            background: #fff url('./../images/design/logo.png');
+            text-indent: -999px;
+            overflow: hidden;
+        }
+    }
+}
+
+.langSelector{
+    @include _media(min, lg){
+        position: absolute;
+        top: 0;
+    }
+}
+.miLogin {
+    @include _media(min, lg){
+        margin-top: 8px;
+    }
+    a{
+        color: #000;
+    }
+}

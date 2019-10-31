@@ -1,0 +1,61 @@
+.homeCalculator{
+    background-color: #E8EFFF;
+    h2{
+        margin-top: 0;
+    }
+    .form-control, button{
+        font-family: $font-pr;
+        height: 42px;
+    }
+    select{
+        min-width: 200px;   
+    }
+    .radiogroup{
+        @include _media(min, sm){
+            margin-left: 35px;
+        }
+    }
+    .btn{
+        font-size: 14px;
+        width: 100%;
+        text-transform: uppercase;
+        @include _media(min, sm){
+            width: auto;
+            float: right;
+        }
+        @include _media(min, lg){
+            width: auto;
+            float: none;
+        }
+    }
+    .tagLine{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    fieldset{
+        margin-bottom: 25px;
+        display: block;
+        margin-right: 0;
+        @include _media(min, sm){
+            display: inline-block;
+        }
+    }
+    .min__fields{
+        display: flex;
+        justify-content: space-between;
+        fieldset{
+            width: calc((100% / 3) - 10px);
+            @include _media(min, lg){
+                width: calc((100% / 4) - 10px);
+            }
+        }
+        .form-control{
+            @include _media(min, md){
+                width: 150px;
+            }
+        }
+        @include _media(min, lg){
+            display: block;
+        }
+    }
+}

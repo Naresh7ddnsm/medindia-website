@@ -3,15 +3,59 @@
 @include font-face('pnt', '../fonts/ProximaNovaT-Thin', normal, normal);
 @include font-face('pnr', '../fonts/ProximaNova-Regular', normal, normal);
 @include font-face('pnb', '../fonts/ProximaNova-Bold', normal, normal);
+@include font-face('lr', '../fonts/Lora-Regular', normal, normal);
+@include font-face('mi-icon', '../fonts/icomoon', normal, normal);
+
+$font-pt: 'pnt', sans-serif;
+$font-pr: 'pnr', sans-serif;
+$font-pb: 'pnb', sans-serif;
+$font-sr: 'lr', sans-serif;
+$font-icon: 'mi-icon', arial;
+
 
 body {
-	font-family: 'pnr', sans-serif;
+	font-family: $font-pr;
 	font-size: rem(16px);
 }
-h1{
-	color: red;
+h1, h2, h3, h4, h5, h6{
+	font-family: $font-sr;
 }
-h2{
-	color: orange;
-	transition: all 360ms ease-in;
+.full-card-link{
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+section {
+	.header{
+		.title{
+			font-family: $font-pt;
+			color: #000;
+			font-size: 22px;
+			text-transform: uppercase;
+			position: relative;
+			padding-right: 60px;
+			@include _media(min, lg){
+				font-size: 32px;
+			}
+		}
+		.viewall__link{
+			text-transform: capitalize;
+			font-size: 14px;
+			position: absolute;
+			right: 0; top: 50%;
+			transform: translateY(-50%);
+			//padding: 4px 8px;
+			line-height: 18px;
+			//border: 1px solid #ddd;
+			//border-radius: 4px;
+			text-decoration: none;
+			color: #000;
+			&:hover{
+				border-color: #999;
+			}
+		}
+	}
 }

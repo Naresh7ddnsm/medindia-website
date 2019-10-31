@@ -7,6 +7,6 @@
 		$vis : "#{$vis}, .visible-#{$point}, .hidden-#{$point}, .visible-#{$point}-only";
 	}
 	#{$vis} {
-		display: none;
+		display: none!important;
 	}
 }

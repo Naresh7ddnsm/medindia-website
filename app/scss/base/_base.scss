@@ -34,13 +34,18 @@ summary {
   display: block;
 }
 .clearfix {
-	&:before,
-	&:after {
-	  content: " ";
-	  display: table;
+		&:before,
+		&:after {
+			content: " ";
+			display: table;
+		}
+		&:after {
+			clear: both;
+		}
 	}
-	&:after {
-	  clear: both;
+	.static{
+		position: static!important;
 	}
-  }
-  
+  .relative{
+		position: relative!important;
+	}

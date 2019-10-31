@@ -1,0 +1,42 @@
+//**************************
+// Calculator section start
+//**************************
+section.homeCalculator.ph-xxs-30
+    .container
+        .row.clearfix
+            .grid-xxs-12.grid-md-5.hidden-xxs.visible-md
+                .media
+                    img.img-responsive(src="./assets/images/src/bmi.png" alt="" title="")
+            .grid-xxs-12.grid-md-7
+                .section__content.pt-lg-60
+                    h2 Body Mass Index (BMI)
+                    p.tagLine A measure of body fat in adults
+                    form.form__basic.clearfix(action="")
+                        .field__inline
+                            fieldset
+                                label(for="")
+                                select.form-control(name="")
+                                    option Ethnicity
+                            fieldset
+                                .radiogroup
+                                    label(for="male")
+                                        input#male(type="radio" name="gender") 
+                                        | Male
+                                    label(for="female")
+                                        input#female(type="radio" name="gender") 
+                                        | Female
+                        .field__inline.min__fields
+                            fieldset
+                                label(for="")
+                                input.form-control(type="tel" name='' placeholder='Age')
+                            fieldset
+                                label(for="")
+                                input.form-control(type="tel" name='' placeholder='Weight')
+                            fieldset
+                                label(for="")
+                                input.form-control(type="tel" name='' placeholder='height')
+                        .field__inline
+                            button.btn.btn-primary.ptn-lg(type="submit") Calculate BMI
+//**************************
+// Calculator section start
+//**************************

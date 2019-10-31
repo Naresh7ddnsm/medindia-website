@@ -27,6 +27,7 @@
 
 
 // core module
+@import "module/dropdown";
 @import "module/buttons";
 @import "module/form";
 @import "module/alert";
@@ -35,6 +36,17 @@
 
 // app components
 @import "app_components/app";
+@import "app_components/icons";
+@import "app_components/header-topBar";
+@import "app_components/header-logoBar";
+@import "app_components/header-navBar";
+@import "app_components/empower";
+@import "app_components/_card-row";
+@import "app_components/card-02";
+@import "app_components/home-calculator";
+@import "app_components/widgets";
+@import "app_components/footer";
+
 
 // theme setting
 @import "theme/theme";

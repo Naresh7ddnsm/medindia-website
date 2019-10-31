@@ -57,7 +57,8 @@ task('scssTask', () => {
     return src(fsPath.app.css)
         .pipe(sourcemaps.init()) // initialize sourcemaps first
         .pipe(sass()) // compile SCSS to CSS
-        .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
+		//.pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
+		.pipe(postcss([ autoprefixer() ])) // PostCSS plugins
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
         .pipe(dest(fsPath.dist.css)
     ); // put final CSS in dist folder
@@ -69,7 +70,7 @@ task('jsTask', () => {
         fsPath.app.js
 	])
         .pipe(concat('app.js'))
-        .pipe(uglify())
+        /*.pipe(uglify())*/
         .pipe(dest(fsPath.dist.js)
 	);
 });

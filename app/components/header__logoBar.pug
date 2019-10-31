@@ -1,0 +1,46 @@
+//*********************
+// Header Logobar Start
+//*********************		
+.logoBar
+    .container
+        .row.clearfix
+            .grid-xxs-8.grid-lg-4
+                .brand
+                    span.hamburgerMenu.visible-xxs.hidden-lg.icon-menu(hamburget__trigger data-status="open")
+                    a.brand__logo(href="/" alt="Medindia" title="Medindia") Medindia
+            .grid-xxs-4.grid-lg-push-4
+                ul.navBar--right.clearfix
+                        li.dropdown__trigger.langSelector.visible-xxs.hidden-lg
+                            a(href="javascript:;")
+                                i.icon.lang_icon
+                                span English (US)
+                            span.caret
+                            ul.dropdown__menu.dropdown__menu--right
+                                li 
+                                    a(href="" title="") Tamil
+                                li 
+                                    a(href="" title="") Telugu
+                                li 
+                                    a(href="" title="") Hindi
+                        li.dropdown__trigger.miLogin
+                            a(href="javascript:;")
+                                i.icon.user_icon.icon-user
+                                span Login / Register
+            .grid-lg-4.hidden-xxs.visible-lg.grid-lg-pull-4
+                .google-form.gsearch
+                    script.
+                        (function() {
+                        var cx = '006251122200401839306:xqepsetvscg';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                        '//cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                        })();
+                    gcse:searchbox-only(resultsurl='https://www.medindia.net/search-result.asp', queryparametername='q')
+            
+//*********************
+// Header Logobar End
+//*********************

@@ -4,38 +4,24 @@ html
 		meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		title Your Website
-		link(href="/assets/css/main.css" rel="stylesheet")
+		link(href="./assets/css/main.css" rel="stylesheet")
 	body
 		//***************
-		// Header end 
+		// Header Start 
 		//***************
 		header
-			.topBar
-				.container
-					.row
-						.col-md-10
-							ul
-								li About
-									ul 
-										li
-											a(href="" alt="" title="") About Medindia 
-										li
-											a(href="" alt="" title="") Medical Review Team
-										li
-											a(href="" alt="" title="") Content Team
-										li
-											a(href="" alt="" title="") Medindia Interviews
-										li
-											a(href="" alt="" title="") Medindia in the News
-										li
-											a(href="" alt="" title="") Sitemap
-										li
-											a(href="" alt="" title="") Advertise with Us
-										
-						.col-md-2
-					
+			include ./components/header__topBar.pug	
+			include ./components/header__logoBar.pug
+			include ./components/header__navBar.pug
 		//***************
 		// Header end 
 		//***************
+		.pageContent
+			include ./components/empowering.pug
+			include ./components/whatsnew.pug
+			include ./components/home-calculator.pug
+			include ./components/widget-01.pug
+		footer
+			include ./components/footer.pug
 		
-		script(src="/assets/js/app.js")
+		script(src="./assets/js/app.js")

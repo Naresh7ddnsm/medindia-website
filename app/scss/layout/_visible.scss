@@ -21,16 +21,16 @@
 	}
 	@media #{$media}{
 		.visible-#{$point}{
-			display: block;
+			display: block!important;
 		}
 		.visible-#{$point}-inline{
-			display: inline;
+			display: inline!important;
 		}
 		.visible-#{$point}-inline-block{
-			display: inline-block;
+			display: inline-block!important;
 		}
 		.hidden-#{$point}{
-			display: none;
+			display: none!important;
 		}
 	}
 }

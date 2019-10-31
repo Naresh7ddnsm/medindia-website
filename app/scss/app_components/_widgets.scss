@@ -1,0 +1,9 @@
+.widget-table-container{
+    display: table;
+    width: 100%;
+}
+.widget-table-cell{
+    display: table-cell;
+    vertical-align: top;
+}
+@import "./widget-01";

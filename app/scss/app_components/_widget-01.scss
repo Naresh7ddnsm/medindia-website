@@ -1,0 +1,53 @@
+.widget-01{
+    display: block;
+    @include _media(min, sm){
+        display: table;
+    }
+    .widget-table-cell{
+        padding-left: 15px;
+        padding-right: 15px;
+        display: block;
+        margin-bottom: 20px;
+        @include _media(min, sm){
+            display: table-cell;
+        }
+        @include _media(min, md){
+            margin-bottom: 0;
+        }
+        &:last-child{
+            display: none;
+            @include _media(min, lg){
+                display: table-cell;
+            }
+        }
+    }
+    .card{
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 8px;
+        margin-bottom: 10px;
+        // box-shadow: 0 2px 7px rgba(145, 145, 145, 0.35);
+        margin-bottom: 20px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        @include _media(min, sm){
+            margin-bottom: 10px;
+        }
+        &-title{
+           font-size: 14px; 
+           font-weight: normal;
+           line-height: 18px;
+           max-height: 54px;
+           overflow: hidden;
+        }
+        &__type2{
+            height: 100%;
+        }
+    }
+    .cell-mx{
+        @include _media(min, sm){
+            width: 340px;
+        }
+    }
+}
