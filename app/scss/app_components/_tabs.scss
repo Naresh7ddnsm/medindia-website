@@ -1,0 +1,66 @@
+.widgetTab{
+    &__header{
+        
+    }
+    .tab{
+        &-items{
+            list-style: none;
+        }
+        &-item{
+            float: left;
+            width: calc(100% / 5);
+            cursor: pointer;
+        }
+        &-link{
+            display:block;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-family: $font-pb;
+            text-transform: uppercase;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 3px solid #ddd;
+            pointer-events: none;
+            span{
+                pointer-events: none;
+                display: none;
+                font-size: 14px;
+                text-transform: none;
+                font-family: $font-pr;
+                color: #666;
+                @include _media(min, sm){
+                    display: block
+                }
+            }
+            &.active, &:hover{
+                position: relative;
+                border-bottom: 3px solid #225566;
+                color: #225566
+            }
+        }
+        &-content{
+            display: none;
+            &.active{
+                display: block; 
+            }
+        }
+    }
+}
+
+.tabs-home{
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-bottom: 15px;
+    & .tab-item{
+        @include _media(max, md){
+            width: auto;
+            float: none;
+            display: inline-block;
+        }   
+    }
+}
+.home-tab-section .card__type2{
+    @include _media(min, lg){
+        margin-bottom: 0;
+    }
+}

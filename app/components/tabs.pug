@@ -1,0 +1,37 @@
+//**************************
+// section start
+//**************************
+section.ph-xxs-30
+  .container
+    .widgetTab.tab__container
+        .widgetTab__header
+            ul.tab-items.clearfix.tabs-home
+                li.tab-item(data-target='#tab-content-01')
+                    a.tab-link.active(href="javascript:;" title="What's New") What's New
+                        span New on Medindia
+                li.tab-item(data-target='#tab-content-02')
+                    a.tab-link(href="javascript:;" title="Health Reports") Health Reports
+                        span Get Health Report
+                li.tab-item(data-target='#tab-content-03')
+                    a.tab-link(href="javascript:;" title="Latest News") Latest News
+                        span Latest news updates
+                li.tab-item(data-target='#tab-content-04')
+                    a.tab-link(href="javascript:;" title="Beauty Tips") Beauty Tips
+                        span Get useful tip for you beauty
+                li.tab-item(data-target='#tab-content-05')
+                    a.tab-link(href="javascript:;" title="Home Remedies") Home Remedies
+                        span Get simple home remedies
+        .widgetTab__body
+            .tab-content#tab-content-01.active 
+                include homeTab3.pug
+            .tab-content#tab-content-02
+                include homeTab4.pug
+            .tab-content#tab-content-03
+                include homeTab1.pug
+            .tab-content#tab-content-04
+                include homeTab2.pug
+            .tab-content#tab-content-05
+                include homeTab5.pug
+//**************************
+// section start
+//**************************

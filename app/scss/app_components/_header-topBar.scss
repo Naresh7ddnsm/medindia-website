@@ -36,6 +36,12 @@ header{
     }
     > li{
         float: right;
+        .icon{
+            margin-right: 4px;
+            vertical-align: middle;
+            margin-top: -3px;
+            display: inline-block;
+        }
         & + li {
             margin-left: 0;
             margin-right: 25px;

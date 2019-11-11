@@ -4,15 +4,15 @@
 .logoBar
     .container
         .row.clearfix
-            .grid-xxs-8.grid-lg-4
+            .grid-xxs-7.grid-xs-8.grid-lg-4
                 .brand
                     span.hamburgerMenu.visible-xxs.hidden-lg.icon-menu(hamburget__trigger data-status="open")
                     a.brand__logo(href="/" alt="Medindia" title="Medindia") Medindia
-            .grid-xxs-4.grid-lg-push-4
+            .grid-xxs-5.grid-xs-4.grid-lg-push-4
                 ul.navBar--right.clearfix
                         li.dropdown__trigger.langSelector.visible-xxs.hidden-lg
                             a(href="javascript:;")
-                                i.icon.lang_icon
+                                i.icon.icon-language
                                 span English (US)
                             span.caret
                             ul.dropdown__menu.dropdown__menu--right
@@ -26,7 +26,11 @@
                             a(href="javascript:;")
                                 i.icon.user_icon.icon-user
                                 span Login / Register
-            .grid-lg-4.hidden-xxs.visible-lg.grid-lg-pull-4
+                        li.dropdown__trigger.search__trigger.visible-xxs.hidden-lg
+                            a(href="javascript:;" gsearch-trigger)
+                                i.icon.user_icon.icon-magnifying-glass
+                                span Login / Register
+            .grid-lg-4.grid-lg-pull-4.gsearch__container#gsearch__container
                 .google-form.gsearch
                     script.
                         (function() {
@@ -40,7 +44,17 @@
                         s.parentNode.insertBefore(gcse, s);
                         })();
                     gcse:searchbox-only(resultsurl='https://www.medindia.net/search-result.asp', queryparametername='q')
-            
+                    ul.commonList.visible-xxs.hidden-lg
+                        li.title Top Search
+                        li
+                            a(href="javascript:;") Suggestion 01
+                        li
+                            a(href="javascript:;") Suggestion 02
+                        li
+                            a(href="javascript:;") Suggestion 03
+                        li
+                            a(href="javascript:;") Suggestion 04
+                .gsearchcloud__bg#gsearchcloud__bg
 //*********************
 // Header Logobar End
 //*********************

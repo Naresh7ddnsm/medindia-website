@@ -10,6 +10,19 @@
   font-family: $font-icon;
 }
 
+
+.icon-left-arrow:before {
+  content: "\e90e";
+}
+.icon-cross:before {
+  content: "\e90f";
+}
+.icon-language:before {
+  content: "\e910";
+}
+.icon-right-arrow:before {
+  content: "\e911";
+}
 .icon-delicious:before {
   content: "\e900";
 }
@@ -44,7 +57,7 @@
   content: "\e90a";
 }
 .icon-user:before {
-  content: "\e90b";   
+  content: "\e90b";
 }
 .icon-world-grid:before {
   content: "\e90c";
