@@ -7,7 +7,9 @@ var $d = $(document),
     m_gsearch = $('#gsearch__container'),
     m_gsearchTrigger = $('[gsearch-trigger]'),
     m_gsearchcloud__bg = $('#gsearchcloud__bg'),
-    trigger_tab = $('.tab-item');
+    trigger_tab = $('.tab-item'),
+    trigger_cookieClose = $('#trigger_cookieClose'),
+    ele_cookies = $('#cookies');
     
 app.global = {
     device: function(){
@@ -19,6 +21,7 @@ app.global = {
         m_gsearchcloud__bg.on('click', this.gsearch_close.bind(this));
         //m_gsearchTrigger.on('mouseout', this.gsearch.bind(this, 'close'));
         trigger_tab.on('click', this.handler_tab.bind(this));
+        trigger_cookieClose.on('click', this.handler_cookieClose.bind(this));
     },
     init: function(){ 
         //this.device() ? null : this.slickIcon();
@@ -35,7 +38,7 @@ app.global = {
         $('#slider__icons').slick({
             centerMode: true,
             slidesToShow: 7,
-            arrows: false,
+            arrows: true,
             responsive: [{
                     breakpoint: 1024,
                     settings: {
@@ -59,6 +62,7 @@ app.global = {
                 }]
           });
     },
+    
     hamburgerMenu: function(e){
         var ele = $(e.target), 
             STATUS = ele.data('status');
@@ -98,6 +102,9 @@ app.global = {
             this.bodyScrollBlock(!true)
         }*/
     },
+    handler_cookieClose: function(){
+        ele_cookies.hide();
+    },
     handler_tab: function(e){
         var ele =  $(e.target),
             target = ele.data('target'),
@@ -114,6 +121,7 @@ app.global = {
 // Run the global stuff
 $(function(){
     app.global.init();
+    ele_cookies.show();
 })
 window.addEventListener("load", function(){
     app.global.slickIcon();
