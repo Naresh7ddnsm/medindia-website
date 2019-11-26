@@ -6,6 +6,12 @@
 	outline: none;
 	@include padding(null, rem(10px), null, rem(10px))
 }
+fieldset{
+	label{
+		display: block;
+		margin-bottom: 12px;
+	}
+}
 .field__inline{
 	fieldset{
 		display: inline-block;

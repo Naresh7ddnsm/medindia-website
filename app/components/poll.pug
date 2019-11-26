@@ -1,0 +1,21 @@
+section.section-poll.ph-xxs-20.ph-md-30
+    .container
+        .row.clearfix
+            .grid-md-4
+                .poll-container
+                    h3 Poll
+                    .poll-question.mb-xxs-20 Do you eat right for your blood type?
+                    .poll-options
+                        form(action="")
+                            fieldset
+                                .radiogroup
+                                    label(for="pollOp1")
+                                        input#pollOp1(type="radio" name="poll-opt") 
+                                        | Yes
+                                    label(for="pollOp2")
+                                        input#pollOp2(type="radio" name="poll-opt") 
+                                        | No
+                                    label(for="pollOp3")
+                                        input#pollOp3(type="radio" name="poll-opt") 
+                                        | Not Sure
+                            button.btn.btn-md.btn-circle.btn-warning(type="submit") Vote

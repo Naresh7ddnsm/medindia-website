@@ -1,0 +1,57 @@
+section.ph-xxs-25.ph-lg-40.relative
+    .bg-pattern
+    .container
+        .row.clearfix
+            .grid-md-6.grid-lg-4
+                .comp-find.comp-find-doctor.mb-xxs-20.mb-md-20.mb-lg-0
+                    .comp-header
+                        h3.mb-xxs-30 Find Doctors by Speciality
+                    .comp-body
+                        form.form__basic.clearfix(action="")
+                            .field__inline.claerfix
+                                fieldset.pr-xxs-10
+                                    label City
+                                    input.form-control(name="city" placeholder="Enter City")
+                                fieldset.pl-xxs-10
+                                    label(for="") Speciality
+                                    select.form-control(name="")
+                                        option Select Speciality
+                            fieldset
+                                label By Name
+                                input.form-control(name="city" placeholder="By Name")
+                            fieldset.clearfix
+                                button.f-right.btn.btn-md.btn-circle.btn-info(type="submit") Search
+            .grid-md-6.grid-lg-4
+                .comp-find.comp-find-doctor.mb-xxs-20.mb-md-20.mb-lg-0
+                    .comp-header
+                        h3.mb-xxs-30 Search for Indian Hospitals
+                    .comp-body
+                        form.form__basic.clearfix(action="")
+                            fieldset
+                                label By Hospital
+                                input.form-control(name="city" placeholder="Enter Hospital Name")
+                            fieldset
+                                label
+                                    .radiogroup
+                                        label(for="city")
+                                            input#city(type="radio" name="type") 
+                                            | City
+                                        label(for="state")
+                                            input#state(type="radio" name="type") 
+                                            | State
+                                        label(for="pincode")
+                                            input#pincode(type="radio" name="type") 
+                                            | Pincode
+                                input.form-control(name="city" placeholder="By Name")
+                            fieldset.clearfix
+                                button.f-right.btn.btn-info.btn-md.btn-circle(type="submit") Search
+            .grid-md-6.grid-lg-4
+                .comp-find.comp-find-doctor
+                    .comp-header
+                        h3.mb-xxs-30 Find Brand Names of Generic Drugs
+                    .comp-body
+                        form.form__basic.clearfix(action="")
+                            fieldset
+                                input.form-control(name="city" placeholder="Enter Hospital Name")
+                            fieldset.clearfix
+                                button.f-right.btn.btn-info.btn-md.btn-circle(type="submit") Search

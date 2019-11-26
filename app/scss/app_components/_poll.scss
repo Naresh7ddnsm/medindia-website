@@ -1,0 +1,23 @@
+.section-poll{
+    background: #60c5a7 url("./../images/design/poll-bg.jpg") no-repeat 0 center;
+    @include _media(min, sm){
+        background-size: cover;
+    }
+    h3{
+        margin-top: 0;
+    }
+    .poll-question{
+        font-size: 20px;
+        //color: #fff;
+    }
+    label{
+        //color: #fff
+    }
+    button{
+        min-width: 180px;
+    }
+    .poll-container{
+        padding: 20px;
+        //background: #fff;
+    }
+}
