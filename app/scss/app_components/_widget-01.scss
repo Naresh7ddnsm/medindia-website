@@ -2,6 +2,7 @@
     display: block;
     @include _media(min, sm){
         display: table;
+        table-layout: fixed;
     }
     .widget-table-cell{
         padding-left: 15px;
