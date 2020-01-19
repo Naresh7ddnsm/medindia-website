@@ -3,8 +3,9 @@ html
 	head
 		meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="robots" content="noindex")
 		title Your Website
-		link(href="./assets/css/main.css" rel="stylesheet")
+		include ./components/head.pug
 	body
 		//***************
 		// Header Start 
@@ -17,15 +18,20 @@ html
 		// Header end 
 		//***************
 		.pageContent
+			include ./components/ads-section.pug
 			include ./components/empowering.pug
 			include ./components/tabs.pug
-			include ./components/whatsnew.pug
+			include ./components/tabs-2.pug
+			include ./components/ads-section.pug
+			include ./components/widget-02.pug
+			include ./components/whatsnew-2.pug
 			include ./components/home-calculator.pug
+			include ./components/ads-section.pug
 			include ./components/find-elements.pug
 			include ./components/poll.pug
 			include ./components/widget-01.pug
 		footer
 			include ./components/footer.pug
 		include ./components/cookies-popup.pug
+		include ./components/ask-an-expert.pug
 		
-		script(src="./assets/js/app.js")

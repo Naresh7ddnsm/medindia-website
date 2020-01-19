@@ -1,0 +1,19 @@
+$length : length($grid-breakpoints-keys);
+$dic: 0;
+@for $i from 1 through length($grid-breakpoints-keys) {
+
+    $dic: $length - $i;
+
+    $screen: nth($grid-breakpoints-keys, $dic+1);
+
+    $screen_value: map-get($grid-breakpoints, $screen);
+
+    $clearscreen: ".grid-#{$screen}-12:nth-child(n+1), .grid-#{$screen}-6:nth-child(2n+1), .grid-#{$screen}-4:nth-child(3n+1), .grid-#{$screen}-3:nth-child(4n+1), .grid-#{$screen}-2:nth-child(6n+1), .grid-#{$screen}-1:nth-child(12n+1)";
+
+    @media (max-width: #{$screen_value}) {
+        #{$clearscreen}{
+            clear: left;
+        }
+    }
+
+  }

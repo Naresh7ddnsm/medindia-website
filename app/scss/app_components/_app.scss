@@ -1,17 +1,21 @@
 // Importing custom fomnt for the website
 
-@include font-face('pnt', '../fonts/ProximaNovaT-Thin', normal, normal);
-@include font-face('pnr', '../fonts/ProximaNova-Regular', normal, normal);
-@include font-face('pnb', '../fonts/ProximaNova-Bold', normal, normal);
-@include font-face('lr', '../fonts/Lora-Regular', normal, normal);
-@include font-face('mi-icon', '../fonts/icomoon', normal, normal);
+//$URL: "http://medicaljokes.net/demo";
+//$URL: "http://localhost:3000";
+$URL: "./";
+$assets: "#{$URL}/assets";
+
+@include font-face('pnt', '#{$assets}/fonts/ProximaNovaT-Thin', normal, normal);
+@include font-face('pnr', '#{$assets}/fonts/ProximaNova-Regular', normal, normal);
+@include font-face('pnb', '#{$assets}/fonts/ProximaNova-Bold', normal, normal);
+@include font-face('lr', '#{$assets}/fonts/Lora-Regular', normal, normal);
+@include font-face('mi-icon', '#{$assets}/fonts/icomoon', normal, normal);
 
 $font-pt: 'pnt', sans-serif;
 $font-pr: 'pnr', sans-serif;
 $font-pb: 'pnb', sans-serif;
 $font-sr: 'lr', sans-serif;
 $font-icon: 'mi-icon', arial;
-
 
 body {
 	font-family: $font-pr;
@@ -34,7 +38,7 @@ h1, h2, h3, h4, h5, h6{
 section {
 	.header{
 		.title{
-			font-family: $font-pt;
+			font-family: $font-pb;
 			color: #000;
 			font-size: 22px;
 			text-transform: uppercase;
@@ -61,4 +65,23 @@ section {
 			}
 		}
 	}
+}
+.top-border{
+	border-top: 10px solid #000;
+}
+.error{
+	margin-bottom: 15px;
+}
+.error-red{
+	color: red;
+}
+.bg-yellow{
+	background: #ffd600;
+}
+.section-bg-gray-1{
+	background: #fdfcfc;
+}
+.section-horiz-border{
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 }

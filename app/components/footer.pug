@@ -66,8 +66,8 @@
             .grid-md-5.grid-md-push-2
                 .footer__info
                     p.clearfix
-                        img.rapidSSL(src="./assets/images/src/RapidSSL-SEAL-90x50.gif" alt="" title="")
-                        img.icon_hon.img-responsive(src="https://www.honcode.ch/HONcode/Seal/HONConduct994366_s.gif" alt="" title="")
+                        img.rapidSSL.lazyload(data-src="./assets/images/src/RapidSSL-SEAL-90x50.gif" alt="" title="")
+                        img.icon_hon.img-responsive.lazyload(data-src="https://www.honcode.ch/HONcode/Seal/HONConduct994366_s.gif" alt="" title="")
                         |This site complies with the 
                         a(href='https://www.healthonnet.org/HONcode/Conduct.html', rel='noopener noreferrer', target='_blank')  HONcode standard for trustworthy health
                         |  information: 
@@ -77,3 +77,5 @@
 //*****************
 // footer end
 //*****************
+script
+    include ./../../dist/assets/js/app.js

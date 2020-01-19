@@ -4,37 +4,43 @@
 section.homeCalculator.ph-xxs-30
     .container
         .row.clearfix
-            .grid-xxs-12.grid-md-5.hidden-xxs.visible-md
-                .media
-                    img.img-responsive(src="./assets/images/src/bmi.png" alt="" title="")
-            .grid-xxs-12.grid-md-7
-                .section__content.pt-lg-60
+            .grid-xxs-12.grid-md-6.grid-md-push-6
+                .section__content.pt-lg-40.pb-lg-40
                     h2 Body Mass Index (BMI)
                     p.tagLine A measure of body fat in adults
                     form.form__basic.clearfix(action="")
+                        input#bmiunits(name="bmiunits" value="standard" type="hidden")
+                        ul.tabs#bmi-tabs
+                            li.tab.active(data-role="standard") Standard
+                            li.tab(data-role="metric") Metric
                         .field__inline
                             fieldset
                                 label(for="")
                                 select.form-control(name="")
                                     option Ethnicity
+                                    option Asian
+                                    option African
                             fieldset
                                 .radiogroup
-                                    label(for="male")
+                                    label.custom-radio(for="male")
                                         input#male(type="radio" name="gender") 
                                         | Male
-                                    label(for="female")
+                                        i.custom-radio-icon
+                                    label.custom-radio(for="female")
                                         input#female(type="radio" name="gender") 
                                         | Female
+                                        i.custom-radio-icon
                         .field__inline.min__fields
                             fieldset
-                                label(for="")
-                                input.form-control(type="tel" name='' placeholder='Age')
+                                label#bmi-age-label(for="")
+                                input#bmi-age-field.form-control(type="tel" name='age' placeholder='Age')
                             fieldset
-                                label(for="")
-                                input.form-control(type="tel" name='' placeholder='Weight')
+                                label#bmi-weight-label(for="")
+                                input#bmi-weight-field.form-control(type="tel" name='weight' placeholder='Weight (pounds)')
                             fieldset
-                                label(for="")
-                                input.form-control(type="tel" name='' placeholder='height')
+                                label#bmi-height-label(for="")
+                                input#bmi-height-field.form-control(type="tel" name='height' placeholder='Height (cms)')
+                        p.error.error-red Something wrong in the above fileds.
                         .field__inline
                             button.btn.btn-primary.ptn-lg(type="submit") Calculate BMI
 //**************************

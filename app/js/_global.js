@@ -2,6 +2,8 @@
 var $d = $(document),
     $w = $(window),
     $body = $('body'),
+    $nav = $('nav'),
+    navTop = $nav.offset().top;
     hamburgerMenu = $('#canvase'),
     hamburgerMenuTrigger = $('[hamburget__trigger]'),
     m_gsearch = $('#gsearch__container'),
@@ -9,8 +11,15 @@ var $d = $(document),
     m_gsearchcloud__bg = $('#gsearchcloud__bg'),
     trigger_tab = $('.tab-item'),
     trigger_cookieClose = $('#trigger_cookieClose'),
-    ele_cookies = $('#cookies');
-    
+    ele_cookies = $('#cookies'),
+    m_menuLink = $('#canvase .menu__link a'),
+    askanexpert__trigger = $('#askanexpert__trigger'),
+    askanexpert= $('#askanexpert'),
+    triggerclose__askanexpert = $('#close__askanexpert'),
+    modalToggle = $("[data-toggle='modal']"),
+    modalDismiss = $("[data-dismiss='modal']"),
+    autoCompleteAncher = $('.auto-result a'),
+    bmiTabs = $('#bmi-tabs');
 app.global = {
     device: function(){
         return (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
@@ -22,11 +31,79 @@ app.global = {
         //m_gsearchTrigger.on('mouseout', this.gsearch.bind(this, 'close'));
         trigger_tab.on('click', this.handler_tab.bind(this));
         trigger_cookieClose.on('click', this.handler_cookieClose.bind(this));
+        m_menuLink.on('click', this.handler_canvasDropdownMenu.bind(this));
+        askanexpert__trigger.on('click', this.handler_askanexpert.bind(this));
+        triggerclose__askanexpert.on('click', this.close__askanexpert.bind(this));
+        modalToggle.on('click', this.modal.bind(this));
+        modalDismiss.on('click', this.modalClose.bind(this));
+        autoCompleteAncher.on('click', this.autoCompleteClose.bind(this));
+        bmiTabs.find('.tab').on('click', this.bmiTypeSwtch.bind(this));
+        $w.on('scroll', this.sticky_nav.bind(this));
     },
     init: function(){ 
-        //this.device() ? null : this.slickIcon();
-        //this.slickIcon();
+       var _this = this;
         this.events();
+        //When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target.classList.value.indexOf('modal') > -1) {
+                _this.modalClose();
+            }
+        }
+    },
+    sticky_nav: function(e){
+        var height = $nav.outerHeight();
+        console.log('navTop', navTop)
+        if($w.scrollTop() >= navTop && $w.width() >= 1200) {
+            if($body.find('#sticky-fill').length <= 0){
+                $nav.addClass('sticky');
+                $nav.after("<div id='sticky-fill' style='height:"+height+"px'></div>");
+            }
+        } else {
+            $body.find('#sticky-fill').remove();
+            $nav.removeClass('sticky');
+        }
+            
+            
+    },
+    bmiTypeSwtch: function(e){
+        var units= {
+            weight: "",
+            height: ""
+        },
+            ele = $(e.target),
+            role = ele.attr('data-role'),
+            emi_weight = $('#bmi-weight-field'),
+            emi_height = $('#bmi-height-field');
+            emi_units = $('#bmiunits'),
+            ele.siblings().removeClass('active');
+            ele.addClass('active');
+        switch(role) {
+            case "standard":
+                units.weight = "Weight (pounds)";
+                units.height = "Height (cms)";
+                emi_units.val('standard');
+                break;
+            case "metric":
+                units.weight = "Weight (Kgs)";
+                units.height = "height (ft's)";
+                emi_units.val('metric');
+                break;
+        }
+        emi_weight.val('');
+        emi_height.val('');
+        emi_weight.attr('placeholder', units.weight)
+        emi_height.attr('placeholder', units.height)
+    },
+    modalClose: function(){
+        var activeModal = $('.modal.open');
+        activeModal.hide();
+        this.bodyScrollBlock(!true);
+    },
+    modal: function(e){
+        var ele = $(e.target),
+            target = ele.data('target');
+        $(target).show().addClass('open');
+        this.bodyScrollBlock(true)
     },
     resize: function(){
         $this = this;
@@ -62,7 +139,10 @@ app.global = {
                 }]
           });
     },
-    
+    autoCompleteClose: function(e){
+        var ele = $(e.target);
+        ele.closest('.auto-result').addClass('hide');
+    },
     hamburgerMenu: function(e){
         var ele = $(e.target), 
             STATUS = ele.data('status');
@@ -86,21 +166,27 @@ app.global = {
         m_gsearch.slideToggle(360, function(){
             m_gsearch.css('display') == 'block' ? _this.bodyScrollBlock(true) : _this.bodyScrollBlock(!true)
         });
-        /*var ele = $(e.target), 
-            STATUS = ele.data('status');
-        if(typeof STATUS === typeof undefind){
-            ele.attr('data-status', 'open');
-        }
-        STATUS = ele.attr('data-status');
-        if(STATUS == 'open'){
-            this.gsearch_open()
-            ele.attr('data-status', 'close');
-            this.bodyScrollBlock(true)
+    },
+    close__askanexpert: function(){
+        askanexpert__trigger.removeClass('close');
+        askanexpert.removeClass('open');
+    },
+    handler_askanexpert: function(e){
+        var ele = $(e.target);
+        ele.toggleClass('close');
+        askanexpert.toggleClass('open');
+    },
+    handler_canvasDropdownMenu: function(e){
+        var ele = $(e.target);
+        if(ele.parent().hasClass('slide-open')){
+            ele.parent().find('.dropdown__links').slideUp();
+            ele.parent().removeClass('slide-open');
         } else {
-            this.gsearch_close();
-            ele.attr('data-status', 'open');
-            this.bodyScrollBlock(!true)
-        }*/
+            if(ele.siblings().hasClass('dropdown__links')){
+                ele.parent().find('.dropdown__links').slideDown();
+                ele.parent().addClass('slide-open');
+            }
+        }
     },
     handler_cookieClose: function(){
         ele_cookies.hide();

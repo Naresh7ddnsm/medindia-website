@@ -8,6 +8,6 @@
          url($file-name + '.svg##{$font-name}')  format('svg');
     font-weight: $weight;
     font-style: $style;
-    display: swap;
+    font-display: swap;
   }
  }

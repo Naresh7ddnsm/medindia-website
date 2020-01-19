@@ -1,3 +1,6 @@
+//*******************************
+// Search elements section start
+//*******************************
 section.ph-xxs-25.ph-lg-40.relative
     .bg-pattern
     .container
@@ -12,6 +15,11 @@ section.ph-xxs-25.ph-lg-40.relative
                                 fieldset.pr-xxs-10
                                     label City
                                     input.form-control(name="city" placeholder="Enter City")
+                                    ul.auto-result.auto-result-city
+                                        li
+                                            a(href="javascript:;") City 01
+                                        li
+                                            a(href="javascript:;") City 02
                                 fieldset.pl-xxs-10
                                     label(for="") Speciality
                                     select.form-control(name="")
@@ -19,6 +27,11 @@ section.ph-xxs-25.ph-lg-40.relative
                             fieldset
                                 label By Name
                                 input.form-control(name="city" placeholder="By Name")
+                                ul.auto-result.hide
+                                    li
+                                        a(href="javascript:;") Name 01
+                                    li
+                                        a(href="javascript:;") Name 02
                             fieldset.clearfix
                                 button.f-right.btn.btn-md.btn-circle.btn-info(type="submit") Search
             .grid-md-6.grid-lg-4
@@ -30,6 +43,11 @@ section.ph-xxs-25.ph-lg-40.relative
                             fieldset
                                 label By Hospital
                                 input.form-control(name="city" placeholder="Enter Hospital Name")
+                                ul.auto-result.hide
+                                    li
+                                        a(href="javascript:;") Hospital Name 01
+                                    li
+                                        a(href="javascript:;") Hospital Name 02
                             fieldset
                                 label
                                     .radiogroup
@@ -43,6 +61,11 @@ section.ph-xxs-25.ph-lg-40.relative
                                             input#pincode(type="radio" name="type") 
                                             | Pincode
                                 input.form-control(name="city" placeholder="By Name")
+                                ul.auto-result.hide
+                                    li
+                                        a(href="javascript:;") Name 01
+                                    li
+                                        a(href="javascript:;") Name 02
                             fieldset.clearfix
                                 button.f-right.btn.btn-info.btn-md.btn-circle(type="submit") Search
             .grid-md-6.grid-lg-4
@@ -53,5 +76,13 @@ section.ph-xxs-25.ph-lg-40.relative
                         form.form__basic.clearfix(action="")
                             fieldset
                                 input.form-control(name="city" placeholder="Enter Hospital Name")
+                                ul.auto-result.hide
+                                    li
+                                        a(href="javascript:;") Hospital Name 01
+                                    li
+                                        a(href="javascript:;") Hospital Name 02
                             fieldset.clearfix
                                 button.f-right.btn.btn-info.btn-md.btn-circle(type="submit") Search
+//*******************************
+// Search elements section end
+//*******************************

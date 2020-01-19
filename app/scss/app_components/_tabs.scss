@@ -29,7 +29,10 @@
                 font-family: $font-pr;
                 color: #666;
                 @include _media(min, sm){
-                    display: block
+                    display: block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
             &.active, &:hover{
@@ -44,6 +47,10 @@
                 display: block; 
             }
         }
+    }
+    .whatsnew{
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 

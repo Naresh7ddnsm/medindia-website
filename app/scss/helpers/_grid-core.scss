@@ -1,18 +1,13 @@
 @mixin float-grid-columns($screen) {
 	$list: ".grid-#{$screen}-1";
-	$clear: '.grid-#{$screen}-1:nth-child(#{$grid-columns}n+1)';
 	@for $i from 1+1 through $grid-columns {
 		$list: "#{$list}, .grid-#{$screen}-#{$i}";
-		$clear: "#{$clear}, .grid-#{$screen}-#{$i}:nth-child(#{ceil($grid-columns / $i)}n+1)";
 	}
 	#{$list} {
 		float: left;
+		
 	}
-	@if $grid_clear == "true" {
-		#{$clear}{
-			clear: left;
-		}
-	}
+
 }
 @mixin grid-columns($screen, $type, $index){
 	@if ($type == width) {
@@ -51,7 +46,6 @@
 	@for $i from $init through $grid-columns {
 		@include grid-columns($screen, $type, $i);
 	}
-
 }
 @mixin _grid-generator($point, $media){
 	@media #{$media}{
@@ -60,6 +54,6 @@
 		@include loop-grid($point, push);
 		@include loop-grid($point, pull);
 		@include loop-grid($point, offset);
-		@include loop-grid($point, clear);;
+		@include loop-grid($point, clear);
 	}
 }

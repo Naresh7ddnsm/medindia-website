@@ -10,6 +10,13 @@
   font-family: $font-icon;
 }
 
+
+.icon-up-arrow:before {
+  content: "\e914";
+}
+.icon-down-arrow:before {
+  content: "\e915";
+}
 .icon-next:before {
   content: "\e912";
 }

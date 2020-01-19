@@ -35,14 +35,19 @@
             margin-bottom: 10px;
         }
         &-title{
-           font-size: 14px; 
-           font-weight: normal;
-           line-height: 18px;
-           max-height: 54px;
+           font-size: 18px; 
+           line-height: 22px;
+           max-height: calc(22px * 2);
            overflow: hidden;
         }
         &__type2{
             height: 100%;
+        }
+        &__content{
+            padding: 10px;
+            /*@include _media(min, lg){
+                padding: 10px;
+            }*/
         }
     }
     .cell-mx{

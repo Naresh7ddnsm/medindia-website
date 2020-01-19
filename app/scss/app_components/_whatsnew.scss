@@ -1,0 +1,54 @@
+.whatsnew{
+    padding-top: 15px;
+    .min-h{
+        @include _media(min, xs){
+            min-height: 180px;
+        }
+    }
+    .card{
+        box-shadow: none;
+        &__media{
+            img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        &__headline{
+            min-height: auto;
+            margin-bottom: 15px;
+            a{
+                overflow: hidden;
+            }
+        }
+        &__desc {
+            line-height: 20px;
+            max-height: 40px;
+            overflow: hidden;
+        }
+        &--top-border{
+            border-top: 5px solid #333;
+        }
+    }
+    .grid-xxs-6{
+        @include _media(min, xxs){
+            &:nth-child(2n+1){
+                clear: left;
+            }
+        }
+    }
+    .grid-sm-4{
+        @include _media(min, sm){
+            &:nth-child(3n+1){
+                clear: left;
+            }
+        }
+    }
+    .grid-lg-3{
+        @include _media(min, lg){
+            &:nth-child(4n+1){
+                clear: left;
+            }
+        }
+    }
+}

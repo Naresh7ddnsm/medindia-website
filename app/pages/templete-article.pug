@@ -1,0 +1,30 @@
+doctype html
+html
+    head
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="robots" content="noindex")
+        title Your Website
+        include ./../components/head.pug
+    body
+        header
+            //***************
+            // Header Start
+            //***************
+            include ./../components/header__topBar.pug
+            include ./../components/header__logoBar.pug
+            include ./../components/header__navBar.pug
+            //***************
+            // Header end 
+            //***************
+        .container.clearfix
+            .template
+                .main-content.template-col__big
+                    include ./../components/breadcrumb.pug
+                    include ./../components/article.pug
+            .aside.aside__right.template-col__small
+                    h1 Aside Right    
+        footer
+            include ./../components/footer.pug
+        include ./../components/cookies-popup.pug
+        include ./../components/ask-an-expert.pug

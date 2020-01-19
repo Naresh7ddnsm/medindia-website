@@ -7,6 +7,9 @@
 		box-shadow: 0 2px 7px rgba(145,145,145,.35);
 		#{$c}__content{
 			padding: 10px;
+			@include _media(min, md){
+				padding: 25px;
+			}
 			&--bottom{
 				a{
 					font-size: 14px;
@@ -25,13 +28,15 @@
 			}
 		}
 		#{$c}__headline{
-			line-height: 18px;
-			margin-bottom: 15px;
+			margin-bottom: 0;
 			margin-top: 0;
-			min-height: 80px;
+			min-height: 115px;
 			font-family: $font-pb;
+			line-height: 22px;
 			a{
 				color: #000;
+				font-size: 18px;
+				
 			}
 		}
 		#{$c}__media{
@@ -40,6 +45,9 @@
 		figure{
 			text-align: center;
 			line-height: 0;
+			img{
+				display: block;
+			}
 		}
 	}
 	

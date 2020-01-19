@@ -1,0 +1,24 @@
+.main-content{
+    padding-top: 20px;
+}
+.template{
+
+    @include _media(min, md){
+        float: left;
+        margin-right: -330px;
+        width: 100%;
+        &-col__big{
+            margin-right: 330px;
+        }
+        &-col__small{
+            width: 300px;
+        }
+    }   
+}
+.aside{
+    @include _media(min, md){
+        &__right{
+            float: right;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.breadcrumb{
+    list-style: none;
+    li{
+        float: left;
+    }
+    li:not(:last-child){
+        position: relative;
+        &:after{
+            content: "\e912";
+            font-family: $font-icon;
+            font-weight: bold;
+            position: absolute;
+            font-size: 10px;
+            right: -16px; top: 50%;
+            transform: translateY(-50%);
+            color: #1957c9;
+        }
+    }
+    li:not(:first-child){
+        margin-left: 20px;
+    }
+}

@@ -1,3 +1,6 @@
+//**************************
+// poll section start
+//**************************
 section.section-poll.ph-xxs-20.ph-md-30
     .container
         .row.clearfix
@@ -9,13 +12,23 @@ section.section-poll.ph-xxs-20.ph-md-30
                         form(action="")
                             fieldset
                                 .radiogroup
-                                    label(for="pollOp1")
+                                    label.custom-radio(for="pollOp1")
                                         input#pollOp1(type="radio" name="poll-opt") 
                                         | Yes
-                                    label(for="pollOp2")
+                                        i.custom-radio-icon
+                                    label.custom-radio(for="pollOp2")
                                         input#pollOp2(type="radio" name="poll-opt") 
                                         | No
-                                    label(for="pollOp3")
+                                        i.custom-radio-icon
+                                    label.custom-radio(for="pollOp3")
                                         input#pollOp3(type="radio" name="poll-opt") 
                                         | Not Sure
-                            button.btn.btn-md.btn-circle.btn-warning(type="submit") Vote
+                                        i.custom-radio-icon
+                                    label.custom-radio(for="pollOp4")
+                                        input#pollOp4(type="radio" name="poll-opt") 
+                                        | Not Sure
+                                        i.custom-radio-icon
+                            button.btn.btn-md.btn-circle.btn-warning.text-uppercase(type="submit") Vote
+//**************************
+// poll section end
+//**************************

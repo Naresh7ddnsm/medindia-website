@@ -1,5 +1,5 @@
 .section-poll{
-    background: #60c5a7 url("./../images/design/poll-bg.jpg") no-repeat 0 center;
+    background: #60c5a7 url("#{$assets}/images/design/poll-bg.jpg") no-repeat 0 center;
     @include _media(min, sm){
         background-size: cover;
     }
@@ -10,8 +10,13 @@
         font-size: 20px;
         //color: #fff;
     }
-    label{
-        //color: #fff
+    .radiogroup{
+        label + label{
+            margin-left: 0;
+        }
+        label{
+            margin-right: 15px;
+        }
     }
     button{
         min-width: 180px;

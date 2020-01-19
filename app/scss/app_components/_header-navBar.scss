@@ -5,6 +5,14 @@
     @include _media(min, lg){
         margin-top: 0;
     }
+    @include _media(min, lg){
+        &.sticky{
+            position: fixed;
+            width: 100%;
+            left: 0; top: 0;
+            z-index: 1030;
+        }
+    }
     .container{
         max-height: 47px;
         overflow-y: hidden;
@@ -149,6 +157,21 @@
         background: #fff;
         list-style: none;
         overflow-y: auto;
+        &__link{
+            .icon{
+                position: relative;
+                top: 2px;
+                pointer-events: none;
+            }
+            &.slide-open{  
+                .icon{
+                    position: static;
+                }
+                .icon:before{
+                    content: "\e914";
+                }
+            }
+        }
     }
     .close__link{
         position: relative;
@@ -174,7 +197,7 @@
     }
     .menu__link{
         &:hover .dropdown__links{
-            display: block;
+            // display: block;
         }
     }
     li{
