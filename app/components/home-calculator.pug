@@ -37,9 +37,18 @@ section.homeCalculator.ph-xxs-30
                             fieldset
                                 label#bmi-weight-label(for="")
                                 input#bmi-weight-field.form-control(type="tel" name='weight' placeholder='Weight (pounds)')
-                            fieldset
+                            fieldset.relative.hide(data-for="metric")
                                 label#bmi-height-label(for="")
                                 input#bmi-height-field.form-control(type="tel" name='height' placeholder='Height (cms)')
+                                span.note.for-matric Height (cms)
+                            fieldset.relative(data-for="standard")
+                                label#bmi-height-label(for="")
+                                input#bmi-height-field.form-control(type="tel" name='height' placeholder='Height (feet)')
+                                span.note.for-matric height (Feet)
+                            fieldset.relative(data-for="standard")
+                                label#bmi-height-label(for="")
+                                input#bmi-height-field.form-control(type="tel" name='height' placeholder='Height (inches)')
+                                span.note.for-matric height (Inches)
                         p.error.error-red Something wrong in the above fileds.
                         .field__inline
                             button.btn.btn-primary.ptn-lg(type="submit") Calculate BMI

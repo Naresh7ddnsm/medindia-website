@@ -1,0 +1,49 @@
+.section{
+    &-comment{
+        //border-top: 1px dotted #ddd;
+        //margin-top: 15px;
+        .caption{
+            color: #666;
+        }
+    }
+}
+.comment-container{
+	margin-bottom: rem(25px);
+}
+.comment-header{
+	background: #ddd;
+	padding: rem(8px) rem(15px);
+}
+.form-comment{
+    border: none;
+}
+.comment-body{
+	// margin: 0;
+	border: rem(1px) solid #ddd;
+}
+.form-comment{
+	padding-top: rem(10px);
+	padding-bottom: rem(10px);
+	min-height: rem(100px);
+	resize: none;
+}
+.comment-footer .btn{
+	margin-top: rem(15px);
+	display: inline-block;
+}
+.comment-text{
+	margin: rem(10px);
+}
+
+.comment{
+    margin-bottom: 20px;
+    &.reply{
+        margin-left: 50px;
+    }
+    .btn{
+        margin-top: 5px;
+        padding: 0;
+        line-height: 100%;
+        min-height: auto;
+    }
+}

@@ -5,3 +5,23 @@
         background: #efefef;
     }
 }
+[id*="add-service"]{
+    position: relative;
+    border: 1px solid #ddd;
+    &:before{
+        content: "Advertisement";
+        position: absolute;
+        top: -15px;
+        left: 50%; 
+        font-size: 9px;
+        transform: translateX(-50%);
+        text-transform: uppercase;
+        color: #ddd;
+    }
+    &:empty{
+        border: none;
+    }
+    &:empty:before{
+        content: '';
+    }
+}

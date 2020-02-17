@@ -42,10 +42,11 @@
         .icon-user{
             font-size: 20px;
             margin-top: 3px;
-            pointer-events: none;
+            //pointer-events: none;
             @include _media(min, lg){
-                font-size: 18px;
                 margin-top: 0;
+                text-decoration: none;
+                margin-right: 0;
             }
         }
     }
@@ -57,6 +58,10 @@
         .icon{
             font-size: 20px;
             color: #333;
+        }
+        .dropdown__menu{
+            width: 150px;
+            min-width: auto;
         }
     }
     .search__trigger{
@@ -183,5 +188,68 @@
     }
     a{
         color: #000;
+        cursor: pointer;
+        font-size: 0!important;
+        &:before{
+            font-size: 20px;
+        }
+        @include _media(min, lg){
+            font-size: 16px!important;
+            &:before{
+                vertical-align: middle;
+                // margin-right: 8px;
+            }
+        }
+    }
+    .dropdown__menu{
+        padding: 0;
+        li + li{
+            border-top: 1px solid #ddd;
+        }
+        a{
+            line-height: 34px;
+            padding-right: 15px;
+            padding-left: 15px;
+            font-size: 16px!important;
+            display: block;
+        }
+    }
+    .avator-container{
+        background: #eee;
+        padding-top: 15px;
+    }
+    .profile-avatar{
+        display: block!important;
+        width: 60px; height: 60px;
+        border-radius: 50%;
+        background: #cecece;
+        border: 1px solid #b7b7b7;
+        font-size: 30px;
+        line-height: 60px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 8px;
+    }
+    .user-name{
+        font-size: 16px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        strong{
+            font-family: $font-pb;
+        }
     }
 }
+.dropdown__trigger.langSelector,
+.dropdown__trigger.miLogin{
+    > a{
+         pointer-events: none;
+         > * {
+             pointer-events: none;
+         }
+     }
+ }

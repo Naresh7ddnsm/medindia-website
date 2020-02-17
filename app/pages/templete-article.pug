@@ -5,7 +5,8 @@ html
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(name="robots" content="noindex")
         title Your Website
-        include ./../components/head.pug
+        link(href="./../assets/css/main.css" rel="stylesheet")
+        //-  ./../components/head.pug
     body
         header
             //***************
@@ -17,13 +18,26 @@ html
             //***************
             // Header end 
             //***************
+        include ./../components/article-image.pug
         .container.clearfix
             .template
                 .main-content.template-col__big
                     include ./../components/breadcrumb.pug
                     include ./../components/article.pug
-            .aside.aside__right.template-col__small
-                    h1 Aside Right    
+                    include ./../components/next-prev-links.pug
+                    include ./../components/comments.pug
+                    include ./../components/template-popular.pug
+                    include ./../components/template-reading.pug
+            .aside.aside__right.template-col__small.pt-lg-20
+                include ./../components/aside-whats-new.pug
+                include ./../components/aside-atoz.pug
+                include ./../components/aside-search.pug
+                include ./../components/aside-subscribe.pug
+                include ./../components/aside-stay.pug
+                include ./../components/aside-news-resource.pug
+                include ./../components/aside-category.pug
+                include ./../components/aside-archive.pug
+
         footer
             include ./../components/footer.pug
         include ./../components/cookies-popup.pug

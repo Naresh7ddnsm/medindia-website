@@ -38,11 +38,18 @@
         &-title{
            font-size: 18px; 
            line-height: 22px;
-           max-height: calc(22px * 2);
-           overflow: hidden;
+           margin-bottom: 10px;
         }
         &__type2{
             height: 100%;
+        }
+        &-content{
+            padding: 10px;
+            padding-bottom: 20px;
+            padding-left: 120px;
+            @include _media(min, lg){
+                padding-bottom: 10px;
+            }
         }
         &__content{
             padding: 10px;

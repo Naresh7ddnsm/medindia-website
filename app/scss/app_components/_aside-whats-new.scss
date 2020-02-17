@@ -1,0 +1,16 @@
+.aside{
+    .whats-new{
+        .card{
+            margin-bottom: 15px;
+            &-content{
+                padding-left: 120px;
+            }
+        }
+        .btn{
+            min-width: 140px;
+            padding-top: 0; 
+            padding-bottom: 0;
+            line-height: 32px;
+        }
+    }
+}

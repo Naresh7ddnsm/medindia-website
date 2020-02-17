@@ -1,0 +1,26 @@
+.alph{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include _media(min, lg){
+        margin-right: -15px;
+    }
+    a{
+        width: 30px;
+        // height: 25px;
+        line-height: 30px;
+        border-radius: 50%;
+        font-size: 16px;
+        color: #333;
+        text-transform: uppercase;
+        box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+        text-decoration: none;
+        text-align: center;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        &.active, &:hover{
+            background: $color-primary;
+            color: #fff;
+        }
+    }
+}

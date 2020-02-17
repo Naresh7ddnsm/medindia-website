@@ -1,0 +1,22 @@
+.twitter-link{
+    margin-bottom: 15px;
+}
+.connect-us-link{
+    a{
+      font-size: 40px;  
+      display: inline-block;
+      width: 40px;
+      color: $color-secandory;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+}
+.connect-app{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    li{
+        width: 48%;
+    }
+}

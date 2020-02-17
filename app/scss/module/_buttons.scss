@@ -4,19 +4,22 @@
 	border: 0;
 	cursor: pointer;
 	@include padding(rem(10px), rem(10px), rem(10px), rem(10px));
-	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+	}
 }
 .btn-round{
 	@include border-radius(rem(4px));
 }
-.btn-circle{
-	@include border-radius(rem(20px));
-}
+
 .btn-sm{
 	padding: rem(4px) rem(8px); 
 	@include font-size(14px);
 	&.btn-round{
 		@include border-radius(rem(2px));
+	}
+	&.btn-circle{
+		@include border-radius(rem(16px));
 	}
 }
 .btn-md{
@@ -25,12 +28,18 @@
 	&.btn-round{
 		@include border-radius(rem(4px));
 	}
+	&.btn-circle{
+		@include border-radius(rem(20px));
+	}
 }
 .btn-lg{
 	padding: rem(10px) rem(20px);
 	@include font-size(18px);
 	&.btn-round{
 		@include border-radius(rem(6px));
+	}
+	&.btn-circle{
+		@include border-radius(rem(40px));
 	}
 }
 .btn-default{
@@ -49,6 +58,8 @@
 .btn-primary:hover{
 	background:$btn-primary-hover;
 	border: rem(1px) solid $btn-primary-hover;
+	text-decoration: none;
+	color: #fff;
 }
 .btn-success{
 	background:$btn-success;
@@ -77,6 +88,14 @@
 	background:$btn-warning-hover;
 	border: rem(1px) solid $btn-warning-hover;
 }
+.btn-white{
+	background: $white;
+	border: 1px solid #fff;
+	color: #000;
+	&:hover{
+		border: 1px solid #333;
+	}
+}
 .btn-danger{
 	background:$btn-danger;
 	border: rem(1px) solid $btn-danger-hover;
@@ -95,7 +114,9 @@
 	background:$btn-gray-hover;
 	border: rem(1px) solid $btn-gray-hover;
 }
-
+.btn-inline-block{
+	display: inline-block;
+}
 
 
 

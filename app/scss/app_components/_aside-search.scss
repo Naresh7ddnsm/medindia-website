@@ -1,0 +1,23 @@
+.aside{
+    .section{
+        &-search{
+            .btn{
+                min-width: 100px;
+                padding-top: 0;
+                padding-bottom: 0;
+                line-height: 30px;
+                display: inline-block;
+            }
+        }
+        .text{
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        &__footer{
+            p{
+                margin-bottom: 15px;
+                color: #fff;
+            }
+        }
+    }
+}

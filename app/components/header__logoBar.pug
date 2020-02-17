@@ -10,26 +10,42 @@
                     a.brand__logo(href="/" alt="Medindia" title="Medindia") Medindia
             .grid-xxs-5.grid-xs-4.grid-lg-push-4
                 ul.navBar--right.clearfix
-                        li.dropdown__trigger.langSelector.visible-xxs.hidden-lg
-                            a(href="javascript:;")
-                                i.icon.icon-language
-                                span English (US)
-                            span.caret
-                            ul.dropdown__menu.dropdown__menu--right
+                    li.dropdown__trigger.langSelector.visible-xxs.hidden-lg
+                        a(href="javascript:;")
+                            i.icon.icon-language
+                            span English (US)
+                        span.caret
+                        .dropdown__menu.dropdown__menu--right
+                            span.close X
+                            ul
                                 li 
                                     a(href="" title="") Tamil
                                 li 
                                     a(href="" title="") Telugu
                                 li 
                                     a(href="" title="") Hindi
-                        li.dropdown__trigger.miLogin
-                            a(href="javascript:;")
-                                i.icon.user_icon.icon-user
-                                span Login / Register
-                        li.dropdown__trigger.search__trigger.visible-xxs.hidden-lg
-                            a(href="javascript:;" gsearch-trigger)
-                                i.icon.user_icon.icon-magnifying-glass
-                                span Login / Register
+                    li.dropdown__trigger.miLogin
+                        a.icon.user_icon.icon-user(href="javascript:;") 
+                            span.caret
+                        .dropdown__menu.dropdown__menu--right
+                            span.close X
+                            ul
+                                li.avator-container
+                                    span.profile-avatar M
+                                    p.user-name Welcome <br />
+                                        strong Medindia - Admin
+                                li 
+                                    a(href="javascript:;" title="") My favorite
+                                li 
+                                    a(href="javascript:;" title="") My Wealth Page
+                                li 
+                                    a(href="javascript:;" title="") My Profile
+                                li 
+                                    a(href="javascript:;" title="") Logout
+                    li.dropdown__trigger.search__trigger.visible-xxs.hidden-lg
+                        a(href="javascript:;" gsearch-trigger)
+                            i.icon.user_icon.icon-magnifying-glass
+                            span Login / Register
             .grid-lg-4.grid-lg-pull-4.gsearch__container#gsearch__container
                 .google-form.gsearch
                     //- script.

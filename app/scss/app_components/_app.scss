@@ -1,9 +1,10 @@
 // Importing custom fomnt for the website
 
-//$URL: "http://medicaljokes.net/demo";
-//$URL: "http://localhost:3000";
-$URL: "./";
+// $URL: "http://medicaljokes.net/demo";
+$URL: "http://localhost:3000";
+//$URL: "./";
 $assets: "#{$URL}/assets";
+//$assets: "https://www.medindia.net/includes-opt/assets/";
 
 @include font-face('pnt', '#{$assets}/fonts/ProximaNovaT-Thin', normal, normal);
 @include font-face('pnr', '#{$assets}/fonts/ProximaNova-Regular', normal, normal);
@@ -16,6 +17,10 @@ $font-pr: 'pnr', sans-serif;
 $font-pb: 'pnb', sans-serif;
 $font-sr: 'lr', sans-serif;
 $font-icon: 'mi-icon', arial;
+
+$color-primary: #034054;
+$color-secandory: #55a6c1;
+$color-yellow: #ffd600;
 
 body {
 	font-family: $font-pr;
@@ -84,4 +89,12 @@ section {
 .section-horiz-border{
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
+}
+.section{
+	&-header{
+		h3{
+			font-weight: normal;
+			margin-top: 0;
+		}
+	}
 }

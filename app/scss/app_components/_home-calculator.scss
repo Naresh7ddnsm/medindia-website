@@ -47,15 +47,20 @@
     .min__fields{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         fieldset{
-            width: calc((100% / 3) - 10px);
-            @include _media(min, lg){
+            width: calc((100% / 2) - 10px);
+            @include _media(min, xs){
+                width: calc((100% / 3) - 10px);
+            }
+            @include _media(min, sm){
                 width: calc((100% / 4) - 10px);
             }
         }
         .form-control{
+            min-width: 100%;
             @include _media(min, md){
-                width: 150px;
+                 width: 100%;
             }
         }
         @include _media(min, lg){
@@ -80,5 +85,12 @@
     }
     .error{
         color: #ffd600;
+    }
+    .note{
+        font-size: 12px;
+        color: #fff;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
     }
 } 

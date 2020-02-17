@@ -19,7 +19,11 @@ var $d = $(document),
     modalToggle = $("[data-toggle='modal']"),
     modalDismiss = $("[data-dismiss='modal']"),
     autoCompleteAncher = $('.auto-result a'),
-    bmiTabs = $('#bmi-tabs');
+    bmiTabs = $('#bmi-tabs'),
+    dropdownclose = $('.dropdown__menu .close'),
+    dropdownTrigger = $('.dropdown__trigger') ;
+    category_nav = $('#category-nav');
+    article_ref = $('[data-toggle="popover"]');
 app.global = {
     device: function(){
         return (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
@@ -39,6 +43,9 @@ app.global = {
         autoCompleteAncher.on('click', this.autoCompleteClose.bind(this));
         bmiTabs.find('.tab').on('click', this.bmiTypeSwtch.bind(this));
         $w.on('scroll', this.sticky_nav.bind(this));
+        dropdownclose.on('click', this.dropdownClose.bind(this));
+        dropdownTrigger.on('click', this.dropdownOpen.bind(this));
+        article_ref.on('mouseenter', this.createPop.bind(this));
     },
     init: function(){ 
        var _this = this;
@@ -49,6 +56,23 @@ app.global = {
                 _this.modalClose();
             }
         }
+    },
+    createPop: function(e){
+        var ele = e.target,
+            $ele = $(ele),
+            content = ele.getAttribute("data-content");
+        if(!$ele.find('.popover').length){
+            $ele.append("<div class='popover'>"+content+"</div>");
+        }
+    },
+    dropdownOpen: function(e){
+        var ele = $(e.target);
+        console.log(ele)
+        ele.find('.dropdown__menu').removeAttr('style');
+    },
+    dropdownClose: function(e){
+        var ele = $(e.target);
+        ele.closest('.dropdown__menu').hide();
     },
     sticky_nav: function(e){
         var height = $nav.outerHeight();
@@ -68,31 +92,31 @@ app.global = {
     bmiTypeSwtch: function(e){
         var units= {
             weight: "",
-            height: ""
         },
             ele = $(e.target),
             role = ele.attr('data-role'),
-            emi_weight = $('#bmi-weight-field'),
-            emi_height = $('#bmi-height-field');
-            emi_units = $('#bmiunits'),
+            bmi_weight = $('#bmi-weight-field'),
+            bmi_height = $('#bmi-height-field');
+            bmi_units = $('#bmiunits'),
             ele.siblings().removeClass('active');
             ele.addClass('active');
         switch(role) {
             case "standard":
                 units.weight = "Weight (pounds)";
-                units.height = "Height (cms)";
-                emi_units.val('standard');
+                bmi_units.val('standard');
+                bmi_height.next('.note').hide();
                 break;
             case "metric":
                 units.weight = "Weight (Kgs)";
-                units.height = "height (ft's)";
-                emi_units.val('metric');
+                bmi_units.val('metric');
+                bmi_height.next('.note').show();
                 break;
         }
-        emi_weight.val('');
-        emi_height.val('');
-        emi_weight.attr('placeholder', units.weight)
-        emi_height.attr('placeholder', units.height)
+        bmi_weight.val('');
+        bmi_weight.attr('placeholder', units.weight)
+        ele.closest('form').find("[data-for]").addClass('hide');
+        ele.closest('form').find("[data-for="+role+"]").removeClass("hide");
+
     },
     modalClose: function(){
         var activeModal = $('.modal.open');
@@ -109,6 +133,14 @@ app.global = {
         $this = this;
         $w.on('resize', function(){
             this.device() ? null : this.slickIcon();
+        })
+    },
+    slickCategory: function(){
+        category_nav.slick({
+            arrows: true,
+            variableWidth: true,
+            slidesToShow: 1,
+            infinite: false,
         })
     },
     slickIcon: function(){
@@ -211,4 +243,5 @@ $(function(){
 })
 window.addEventListener("load", function(){
     app.global.slickIcon();
+    app.global.slickCategory();
 });

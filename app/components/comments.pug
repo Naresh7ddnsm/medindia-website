@@ -1,0 +1,38 @@
+//***************
+// Comments start
+//***************
+section.section-comment
+    h3.h3 Post a Comment
+    p.caption.mb-xxs-20 Comments should be on the topic and should not be abusive. The editorial team reserves the right to review and moderate the comments posted on the site.
+    .comment-container
+        .comment-header Leave your comment
+        .comment-body.mb-xxs-20
+            textarea.form-control.form-comment(placeholder="Leave your comment here...")
+        .comment-footer.clearfix
+            p
+                input#reply-notification.mr-xxs-10(type="checkbox" name="reply-notification")
+                label(for="reply-notification") Notify me when reply is posted
+            p 
+                input#comment-agree.mr-xxs-10(type="checkbox" name="comment-agree")
+                label(for="comment-agree") I agree to the 
+                a(href="javascript:;") terms and conditions
+            p.text-right
+                a.btn.btn-primary.btn-md.btn-round(href='#') Post Comment
+    .comments-container
+        .comment
+            .comment-header @Thesocialgeek
+                span.f-right.text-small 10 sep 2017 at 7.30am
+            .comment-body
+                p.comment-text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            .comment-footer.text-right.clearfix
+                a.btn.btn-sm(href='#') Reply
+        .comment.reply
+            .comment-header @Thesocialgeek
+                span.f-right.text-small 10 sep 2017 at 7.30am
+            .comment-body
+                p.comment-text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            .comment-footer.text-right.clearfix
+                a.btn.btn-sm(href='#') Reply
+//***************
+// Comments end
+//***************
